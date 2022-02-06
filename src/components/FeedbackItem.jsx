@@ -4,20 +4,19 @@ import Card from './shared/Card';
 import PropTypes from 'prop-types';
 
  
-function FeedbackItem({rating, text}) {
+function FeedbackItem({item, handleDelete}) {
     
-
   return (
     <Card >
-      <div className="num-display">{rating}</div>
-      <button className="close"><FaTimes color="purple" /></button>
-      <div className="text-display"> {text}</div>
+      <div className="num-display">{item.rating}</div>
+      <button onClick={()=>handleDelete(item.id)} className="close"><FaTimes color="purple" /></button>
+      <div className="text-display"> {item.text}</div>
     </Card>
   )
 }
 
 FeedbackItem.propTypes={
-  rating: PropTypes.number.isRequired,
-  text: PropTypes.string.isRequired
+  item: PropTypes.object.isRequired,
+  
 }
 export default FeedbackItem;

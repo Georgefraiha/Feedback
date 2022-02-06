@@ -11,7 +11,7 @@ function Header({ title, bgColor, textColor }) {
       <div className="container">
         <h2> {title}</h2>
       </div>
-    </header>
+    </header> 
   );
 }
 
