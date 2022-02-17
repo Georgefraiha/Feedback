@@ -4,6 +4,8 @@ import { useState } from "react";
 import FeedbackData from "./data/feedbackData";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
+import { v4 as uuidv4 } from "uuid";
+import { BrowserRouter as router, Route } from "react-router-dom";
 
 function App() {
   const [feedbk, setFeedback] = useState(FeedbackData);
@@ -12,11 +14,17 @@ function App() {
       setFeedback(feedbk.filter((item) => item.id !== id));
     }
   };
+
+  const addFeedback = (newFeedback) => {
+    newFeedback.id = uuidv4();
+    //console.log(newFeedback);
+    setFeedback([newFeedback, ...feedbk]);
+  };
   return (
     <>
       <Header />
       <div className="container">
-        <FeedbackForm />
+        <FeedbackForm handleAdd={addFeedback} />
         <FeedbackStats feedback={feedbk} />
         <FeedBackList feedback={feedbk} handleDelete={deleteFeedback} />
       </div>
