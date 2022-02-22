@@ -3,7 +3,7 @@
 
 ## Install project:
 ### `npm install`
-
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ## Run project:
 ### `npm start`
 
