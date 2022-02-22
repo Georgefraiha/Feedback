@@ -7,7 +7,7 @@
 ## Run project:
 ## `npm start`
 
-## Preview App: https://geo-feedback-react.netlify.app/
+## [Preview App](https://geo-feedback-react.netlify.app/)
 
 ![preview image](https://github.com/Georgefraiha/Feedback/blob/master/screenshots/1.png)
 
