@@ -2,10 +2,10 @@
 ###### Learning project
 
 ## Install project:
-## `npm install`
+### `npm install`
 
 ## Run project:
-## `npm start`
+### `npm start`
 
 ## [Preview App](https://geo-feedback-react.netlify.app/)
 
